@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spacing</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../output.css" rel="stylesheet" />
+
+    <style>
+      #darkToggle:checked + label .toggle-circle {
+        transform: translateX(1.25rem); /* geser ke kanan */
+      }
+    </style>
+  </head>
+
+  <!-- Body -->
+  <body
+    class="bg-gray-100 text-black dark:bg-slate-900 dark:text-slate-200 min-h-screen container mx-10 mt-8"
+  >
+    <hr class="my-20 border border-gray-300" />
+
+    <div class="mb-16 flex justify-center items-center gap-2">
+      <span class="text-sm text-slate-500">Light</span>
+
+      <input type="checkbox" id="darkToggle" class="hidden" />
+
+      <label for="darkToggle" class="relative">
+        <!-- Track -->
+        <div
+          class="w-10 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <!-- Bulatan -->
+          <div
+            class="h-4 w-4 bg-slate-100 rounded-full toggle-circle transition-transform duration-300"
+          ></div>
+        </div>
+      </label>
+
+      <span class="text-sm text-slate-500">Dark</span>
+    </div>
+
+    <div class="container px-8 mx-auto">
+      <img
+        src="/public/dplearning.jpg"
+        alt=""
+        class="float-left mr-3 p-3"
+        width="150"
+        height="75"
+      />
+      <div class="border rounded-lg shadow-lg p-8">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro commodi
+          quis eos ab voluptatibus pariatur iste accusantium expedita deserunt
+          nulla obcaecati similique atque sequi consequatur magni iure
+          aspernatur, rerum consectetur cum sit vel facilis. Error, aliquam
+          aspernatur, porro facilis eveniet eligendi, culpa provident dolorum ab
+          facere sint. Necessitatibus animi alias eos nesciunt, cum laboriosam
+          libero quis optio totam perferendis tenetur vero, distinctio
+          voluptates neque deserunt odio ea aliquam placeat architecto amet
+          molestias fugiat, quibusdam inventore? Aperiam tempore quos unde
+          obcaecati dolores omnis et quia similique tenetur voluptatem sunt illo
+          magni, nihil magnam incidunt odit expedita doloremque deleniti. Sunt
+          aspernatur culpa ipsum ratione aliquid eius modi reprehenderit,
+          doloremque officia eaque tenetur dolor ut harum ea saepe inventore sit
+          possimus cumque accusantium sequi rem tempore atque magni. Praesentium
+          quos deleniti hic quaerat. Maxime dignissimos voluptatum tenetur alias
+          laboriosam. Voluptatibus assumenda obcaecati, sunt eius praesentium
+          enim nisi temporibus. Voluptatibus dicta molestias illum adipisci!
+        </p>
+      </div>
+    </div>
+
+    <!-- Script Dark Mode -->
+    <script>
+      const checkbox = document.getElementById("darkToggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>

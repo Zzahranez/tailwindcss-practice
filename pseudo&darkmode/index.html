@@ -10,10 +10,94 @@
       rel="stylesheet"
     />
     <link href="../output.css" rel="stylesheet" />
+
+    <style>
+      #darkToggle:checked + label .toggle-circle {
+        transform: translateX(1.25rem); /* geser ke kanan */
+      }
+    </style>
   </head>
-  <body class="bg-gray-100 text-black min-h-screen container mx-10 mt-8">
-    <button class=" bg-sky-500 hover:bg-sky-700">
-        Save Changes
+
+  <!-- Body -->
+  <body
+    class="bg-gray-100 text-black dark:bg-slate-900 dark:text-slate-200 min-h-screen container mx-10 mt-8"
+  >
+    <hr class="my-20 border border-gray-300" />
+
+    <div class="mb-16 flex justify-center items-center gap-2">
+      <span class="text-sm text-slate-500">Light</span>
+
+      <input type="checkbox" id="darkToggle" class="hidden" />
+
+      <label for="darkToggle" class="relative">
+        <!-- Track -->
+        <div
+          class="w-10 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <!-- Bulatan -->
+          <div
+            class="h-4 w-4 bg-slate-100 rounded-full toggle-circle transition-transform duration-300"
+          ></div>
+        </div>
+      </label>
+
+      <span class="text-sm text-slate-500">Dark</span>
+    </div>
+
+    <button
+      class="bg-sky-500 hover:bg-sky-700 px-5 py-2 rounded-md text-white font-semibold block mx-auto focus:ring focus:ring-sky-300 dark:bg-gray-700 dark:hover:bg-gray-500 dark:focus:ring-gray-100"
+    >
+      Save Changes
     </button>
+
+    <!-- Card -->
+    <div
+      class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md group hover:bg-sky-500 dark:hover:bg-gray-400"
+    >
+      <h5
+        class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:text-white dark:group-hover:text-white"
+      >
+        My Card
+      </h5>
+      <p
+        class="text-slate-600 group-hover:text-white selection:text-black dark:text-white dark:group-hover:text-white"
+      >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus nam
+        exercitationem ipsam quas sapiente, labore saepe in ullam, quidem minima
+        quis modi earum praesentium placeat voluptatum, aspernatur voluptatibus
+        atque at!
+      </p>
+    </div>
+
+    <!-- Form Card -->
+    <div
+      class="max-w-lg border border-slate-200 rounded-xl mx-auto shadow-md p-5"
+    >
+      <form action="">
+        <label for="email">
+          <span
+            class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-600 after:ml-0.5 dark:text-white"
+            >Email</span
+          >
+          <input
+            id="email"
+            type="email"
+            placeholder="Masukkan email ..."
+            class="px-3 py-2 border shadow rounded w-full block text-sm text-slate-400 focus:outline-none focus-within:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700"
+          />
+        </label>
+      </form>
+    </div>
+
+
+    <!-- Script Dark Mode -->
+     <script>
+        const checkbox = document.getElementById("darkToggle")
+        const html = document.querySelector('html')
+
+        checkbox.addEventListener('click', function(){
+          checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        })
+     </script>
   </body>
 </html>

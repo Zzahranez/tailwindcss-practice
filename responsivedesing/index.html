@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spacing</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../output.css" rel="stylesheet" />
+
+    <style>
+      #darkToggle:checked + label .toggle-circle {
+        transform: translateX(1.25rem); /* geser ke kanan */
+      }
+    </style>
+  </head>
+
+  <!-- Body -->
+  <body
+    class="bg-gray-100 text-black dark:bg-slate-900 dark:text-slate-200 min-h-screen container mx-10 mt-8"
+  >
+    <hr class="my-20 border border-gray-300" />
+
+    <div class="mb-16 flex justify-center items-center gap-2">
+      <span class="text-sm text-slate-500">Light</span>
+
+      <input type="checkbox" id="darkToggle" class="hidden" />
+
+      <label for="darkToggle" class="relative">
+        <!-- Track -->
+        <div
+          class="w-10 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <!-- Bulatan -->
+          <div
+            class="h-4 w-4 bg-slate-100 rounded-full toggle-circle transition-transform duration-300"
+          ></div>
+        </div>
+      </label>
+
+      <span class="text-sm text-slate-500">Dark</span>
+    </div>
+
+    <div class="container px-6 ">
+      <h3 class="text-4xl font-bold text-slate-800">Zahran Ezladi</h3>
+      <img
+        src="/public/dplearning.jpg"
+        alt=""
+        class="mt-4 rounded-xl shadow-xl"
+      />
+      <h2 class="mt-6 text-2xl font-semibold text-slate-800">
+        Mari Bealajr Programming bersama zahran
+      </h2>
+      <p class="mt-2 text-slate-600">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea, ex
+        laudantium. Voluptates minus aliquid quaerat quod dicta? Cum omnis nihil
+        eligendi ratione aliquam, suscipit explicabo voluptatum hic quis! In
+        fuga excepturi ipsa quia voluptatem enim minima similique error
+        voluptates placeat ducimus iste, sint nisi qui vitae dolores iure sunt
+        deleniti?
+      </p>
+      <div class="mt-4">
+        <a
+          href="#"
+          class="inline-block px-5 py-3 bg-red-600 text-white rounded-lg shadow-lg uppercase font-semibold tracking-wider text-sm"
+          >Masuk ke Link</a
+        >
+      </div>
+    </div>
+
+    <!-- Script Dark Mode -->
+    <script>
+      const checkbox = document.getElementById("darkToggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>

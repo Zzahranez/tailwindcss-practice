@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spacing</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../output.css" rel="stylesheet" />
+
+    <style>
+      #darkToggle:checked + label .toggle-circle {
+        transform: translateX(1.25rem); /* geser ke kanan */
+      }
+    </style>
+  </head>
+
+  <!-- Body -->
+  <body
+    class="bg-gray-100 text-black dark:bg-slate-900 dark:text-slate-200 min-h-screen container mx-10 mt-8"
+  >
+    <hr class="my-20 border border-gray-300" />
+    <!-- Button Toggle Cirlce -->
+    <div class="mb-16 flex justify-center items-center gap-2">
+      <span class="text-sm text-slate-500">Light</span>
+
+      <input type="checkbox" id="darkToggle" class="hidden" />
+
+      <label for="darkToggle" class="relative">
+        <!-- Track -->
+        <div
+          class="w-10 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <!-- Bulatan -->
+          <div
+            class="h-4 w-4 bg-slate-100 rounded-full toggle-circle transition-transform duration-300"
+          ></div>
+        </div>
+      </label>
+
+      <span class="text-sm text-slate-500">Dark</span>
+    </div>
+
+    <!-- Main Content For Learning -->
+    <h1 class="flex justify-center text-3xl font-semibold mb-8">
+      Transision, Transform And Animation
+    </h1>
+
+    <!-- Bungkusans -->
+    <div class="flex justify-center mt-14 mb-28">
+      <div
+        class="h-28 w-28 bg-sky-500 rounded-lg hover:rotate-45 hover:scale-150 hover:translate-y-16 transition origin-top-left"
+      ></div>
+
+      <div class="h-28 w-28 mt-left group block">
+        <div
+          class="w-full h-full bg-purple-600 rounded-lg group-hover:rotate-180 origin-top-left transition scale-150 duration-1000"
+        ></div>
+      </div>
+    </div>
+    <h1 class="flex justify-center text-3xl font-semibold mb-8">
+      Transision, Transform And Animation
+    </h1>
+    <div class="flex justify-center mt-28 mb-28">
+      <div class="w-40 h-40 bg-orange-600 rounded-lg block hover:animate-spin" style="animation-duration: 3s;"></div>
+    </div>
+    <!-- Script Dark Mode -->
+    <script>
+      const checkbox = document.getElementById("darkToggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
