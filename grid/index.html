@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spacing</title>
+    <title>Grid</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
@@ -45,10 +45,28 @@
       <span class="text-sm text-slate-500">Dark</span>
     </div>
 
-    <h1 class=" text-4xl font-semibold flex justify-center">Learn FlexBox</h1>
-    <div class=" flex items-center">
-      <img src="/public/dplearning.jpg" alt="Deeplearning" width="150" height="150" class=" hidden lg:block">
+    <h1 class=" text-4xl font-semibold flex justify-center">Grid System</h1>
+    
+    
+    <!-- Main Content -->
+    <div class=" mt-64 p-2 grid grid-cols-2 gap-2 md:grid-cols-4  md:p-4">
+        <h2 class=" text-xl h-1.5 font-semibold text-slate-700 mb-5 md:row-start-2"><span>Welcome to zenorobo</span></h2>
+        <div class=" h-1.5 text-lg font-bold text-slate-600 md:row-start-2">@zazhran</div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
+        <div class="h-15 bg-blue-500 xl:aspect-[4/3] aspect-[4/3] rounded-lg md:aspect-[3/4]"></div>
     </div>
+
+    
+    
+    <!-- End Main Content -->
     <!-- Script Dark Mode -->
     <script>
       const checkbox = document.getElementById("darkToggle");

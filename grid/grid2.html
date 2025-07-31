@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spacing</title>
+    <title>Grid</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
@@ -45,10 +45,33 @@
       <span class="text-sm text-slate-500">Dark</span>
     </div>
 
-    <h1 class=" text-4xl font-semibold flex justify-center">Learn FlexBox</h1>
-    <div class=" flex items-center">
-      <img src="/public/dplearning.jpg" alt="Deeplearning" width="150" height="150" class=" hidden lg:block">
+    <h1 class="text-4xl font-semibold flex justify-center">Grid System</h1>
+
+    <!-- Main Content -->
+    <div class="grid grid-cols-12 gap-4 p-4">
+      <div class="col-span-8 bg-slate-500 p-6 text-white rounded-md">
+        <h2 class="text-xl p-2 font-bold">Deep learning</h2>
+        <p class="text-white">
+          Deep learning is powered AI in machine learning node, they are use the
+          neural network layer to predict a data
+        </p>
+      </div>
+
+      <div class="col-span-4 bg-slate-700 p-6 text-white rounded-md">
+        <h2 class="p-2 font-bold">Machine Learning</h2>
+        <p>
+          Machine learning is a node of the artificital intelligence, where
+          machine can learn by data nothing programming exsplisit
+        </p>
+      </div>
+      
     </div>
+
+
+    <!-- Column  -->
+     <div class=" grid grid-cols-24"></div>
+
+    <!-- End Main Content -->
     <!-- Script Dark Mode -->
     <script>
       const checkbox = document.getElementById("darkToggle");
